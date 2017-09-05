@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Envirorobots::VERSION
   s.authors     = ["Jonathon Padfield"]
   s.email       = ["jonathon.padfield@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Envirorobots."
-  s.description = "TODO: Description of Envirorobots."
+  s.homepage    = "https://github.com/trammel/envirorobots"
+  s.summary     = "Environmentally specific robots.txt"
+  s.description = "Envirormentally specific robots.txt"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
