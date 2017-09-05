@@ -22,3 +22,11 @@ load 'rails/tasks/statistics.rake'
 
 require 'bundler/gem_tasks'
 
+unless ENV['RAILS_ENV'] == 'production'
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+end
+
+task default: %i[
+  spec
+]
