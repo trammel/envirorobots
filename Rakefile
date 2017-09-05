@@ -14,19 +14,18 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
-
-
 load 'rails/tasks/statistics.rake'
-
-
 
 require 'bundler/gem_tasks'
 
 unless ENV['RAILS_ENV'] == 'production'
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)
+  require 'rubocop/rake_task'
+  RuboCop::RakeTask.new
 end
 
 task default: %i[
+  rubocop
   spec
 ]
