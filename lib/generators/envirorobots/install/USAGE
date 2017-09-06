@@ -1,0 +1,16 @@
+Description:
+    Installs the envirorobots engine by adding a new route and placing development and production robots.txt files into place.
+
+Example:
+    rails generate envirorobots:install
+
+    This will move:
+        public/robots.txt to config/envirorobots/production.robots.txt
+
+    This will create:
+        config/envirorobots/development.robots.txt
+        config/envirorobots/production.robots.txt
+
+    This will be added to your config/routes.rb:
+        mount Envirorobots::Engine => '/'
+
