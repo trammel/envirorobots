@@ -19,16 +19,18 @@ module Envirorobots
       end
 
       def move_existing_robots
-        return unless File.exist? File.join(Rails.root, 'public', 'robots.txt')
-        FileUtils.mv(
-          File.join(Rails.root, 'public', 'robots.txt'),
-          File.join(Rails.root, 'config', 'envirorobots', 'production.robots.txt')
-        )
+        source = File.join(Rails.root, 'public', 'robots.txt')
+        destination = File.join(Rails.root, 'config', 'envirorobots', 'production.robots.txt')
+        return unless File.exist? source
+        FileUtils.move source, destination
       end
 
       def provide_new_robots
-        copy_file('development.robots.txt', 'config/envirorobots/development.robots.txt')
-        copy_file('production.robots.txt', 'config/envirorobots/production.robots.txt')
+        ['development.robots.txt', 'production.robots.txt'].each do |filename|
+          puts "Installing #{filename}"
+          next if File.exist? File.join(Rails.root, 'config', 'envirorobots', filename)
+          copy_file filename, "config/envirorobots/#{filename}"
+        end
       end
 
       def install_route

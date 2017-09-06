@@ -9,8 +9,8 @@ module Envirorobots
 
     before do
       prepare_destination
+      remove_existing_robots
       write_empty_routes
-      write_public_robots_txt 'testing'
     end
 
     [
@@ -30,7 +30,8 @@ module Envirorobots
 
     it 'should copy public/robots.txt' do
       write_public_robots_txt 'another test'
-      expect(File.join(Rails.root, 'public', 'robots.txt')).to contain('another test')
+      run_generator
+      expect(File.join(Rails.root, 'config', 'envirorobots', 'production.robots.txt')).to contain('another test')
     end
 
     it 'should always remove public/robots.txt' do
@@ -39,6 +40,7 @@ module Envirorobots
     end
 
     it 'should add a route to routes.rb' do
+      run_generator
       expect(file('config/routes.rb')).to contain("mount Envirorobots::Engine => '/'")
     end
 
@@ -46,6 +48,13 @@ module Envirorobots
       full_name = File.join(Rails.root, 'public', 'robots.txt')
       FileUtils.mkdir_p File.dirname(full_name)
       File.open(full_name, 'w') { |f| f.write(data) }
+    end
+
+    def remove_existing_robots
+      ['development.robots.txt', 'production.robots.txt'].each do |filename|
+        FileUtils.rm_f File.join(Rails.root, 'config', 'envirorobots', filename)
+      end
+      FileUtils.rm_f File.join(Rails.root, 'public', 'robots.txt')
     end
 
     def write_empty_routes
