@@ -1,0 +1,25 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Cross-Site Request Forgery",
+      "warning_code": 7,
+      "fingerprint": "fa73085091bb3d938338b8b50a5053c82fb32e549b68b57058007b9cd8311a7f",
+      "check_name": "ForgerySetting",
+      "message": "'protect_from_forgery' should be called in Envirorobots::RobotsController",
+      "file": "app/controllers/envirorobots/robots_controller.rb",
+      "line": 4,
+      "link": "http://brakemanscanner.org/docs/warning_types/cross-site_request_forgery/",
+      "code": null,
+      "render_path": null,
+      "location": {
+        "type": "controller",
+        "controller": "Envirorobots::RobotsController"
+      },
+      "user_input": null,
+      "confidence": "High",
+      "note": "Controller is designed to take no input, and always output text files. Forgery isn't an issue."
+    }
+  ],
+  "updated": "2017-09-06 23:33:09 +1000",
+  "brakeman_version": "3.7.2"
+}
