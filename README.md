@@ -39,7 +39,9 @@ rails g envirorobots:install
 This command will move your existing public/robots.txt to config/envirorobots/production.robots.txt
 
 ## Health
-[![Build Status](https://travis-ci.org/trammel/envirorobots.svg?branch=master)](https://travis-ci.org/trammel/envirorobots/builds)
+* [![Build Status](https://travis-ci.org/trammel/envirorobots.svg?branch=master)](https://travis-ci.org/trammel/envirorobots/builds)
+* [![codecov](https://codecov.io/gh/trammel/envirorobots/branch/master/graph/badge.svg)](https://codecov.io/gh/trammel/envirorobots)
+* [![Code Climate](https://codeclimate.com/github/trammel/envirorobots/badges/gpa.svg)](https://codeclimate.com/github/trammel/envirorobots)
 
 ## Contributing
 Fork, create branch, write tests, implement feature, fix bugs, submit PR.
