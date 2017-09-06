@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Envirorobots::Engine => '/envirorobots'
+  mount Envirorobots::Engine => '/'
 end

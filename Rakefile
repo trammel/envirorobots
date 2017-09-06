@@ -26,6 +26,6 @@ unless ENV['RAILS_ENV'] == 'production'
 end
 
 task default: %i[
-  rubocop
   spec
+  rubocop
 ]
