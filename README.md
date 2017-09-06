@@ -1,8 +1,18 @@
 # Envirorobots
-Short description and motivation.
+
+This is a minimal Rails Engine to supply environment specific robots.txt files for your rails app.
+
+This is to configure your robots.txt to prevent search engine bots from accidentally indexing your test or staging servers while still allowing indexing of production servers.
+
+It is very similar to https://github.com/LaunchAcademy/roboto
 
 ## Usage
-How to use my plugin.
+
+Add this line to your config/routes.rb
+
+```ruby
+  mount Envirorobots::Engine => '/'
+```
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -20,6 +30,13 @@ Or install it yourself as:
 ```bash
 $ gem install envirorobots
 ```
+
+And then to install the production & development versions of robots.txt
+```bash
+rails g envirorobots:install
+```
+
+This command will move your existing public/robots.txt to config/envirorobots/production.robots.txt
 
 ## Contributing
 Contribution directions go here.
