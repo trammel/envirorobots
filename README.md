@@ -38,8 +38,11 @@ rails g envirorobots:install
 
 This command will move your existing public/robots.txt to config/envirorobots/production.robots.txt
 
+## Health
+ [![Build Status](https://travis-ci.org/trammel/envirorobots.svg?branch=master)]
+
 ## Contributing
-Contribution directions go here.
+Fork, create branch, write tests, implement feature, fix bugs, submit PR.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
