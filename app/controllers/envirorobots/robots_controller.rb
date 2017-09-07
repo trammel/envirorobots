@@ -1,5 +1,3 @@
-require_dependency 'envirorobots/application_controller'
-
 module Envirorobots
   class RobotsController < ActionController::Base
     def show
