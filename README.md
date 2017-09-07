@@ -4,7 +4,7 @@ This is a minimal Rails Engine to supply environment specific robots.txt files f
 
 This is to configure your robots.txt to prevent search engine bots from accidentally indexing your test or staging servers while still allowing indexing of production servers.
 
-It is very similar to https://github.com/LaunchAcademy/roboto
+It is very similar to / owes a lot to https://github.com/LaunchAcademy/roboto
 
 ## Usage
 
