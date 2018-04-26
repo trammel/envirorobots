@@ -4,6 +4,8 @@ Documentation:
   Enabled: false
 AllCops:
   TargetRubyVersion: 2.5
+  Exclude:
+    - 'tmp/**/*'
 ## Defaults from rubocop
 Style/PercentLiteralDelimiters:
   # Specify the default preferred delimiter for all types with the 'default' key
