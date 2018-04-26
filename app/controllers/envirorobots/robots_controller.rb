@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Envirorobots
   class RobotsController < ActionController::Base
     def show

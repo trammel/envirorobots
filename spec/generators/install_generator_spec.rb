@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'ammeter/init'
 require_relative '../../lib/generators/envirorobots/install/install_generator'
@@ -5,7 +7,7 @@ require 'fileutils'
 # rubocop:disable Metrics/BlockLength
 module Envirorobots
   RSpec.describe Envirorobots::Generators::InstallGenerator, type: :generator do
-    destination File.expand_path('../../../tmp', __FILE__)
+    destination File.expand_path('../../tmp', __dir__)
 
     before do
       prepare_destination
@@ -70,3 +72,4 @@ end
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
