@@ -24,12 +24,14 @@ module Envirorobots
         source = File.join(Rails.root, 'public', 'robots.txt')
         destination = File.join(Rails.root, 'config', 'envirorobots', 'production.robots.txt')
         return unless File.exist? source
+
         FileUtils.move source, destination
       end
 
       def provide_new_robots
         ['development.robots.txt', 'production.robots.txt'].each do |filename|
           next if File.exist? File.join(Rails.root, 'config', 'envirorobots', filename)
+
           copy_file filename, "config/envirorobots/#{filename}"
         end
       end
