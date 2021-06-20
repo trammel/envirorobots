@@ -4,6 +4,7 @@ require_relative 'boot'
 
 # Pick the frameworks you want:
 # require "active_record/railtie"
+require 'active_support/core_ext/integer/time'
 require 'action_controller/railtie'
 require 'action_view/railtie'
 # require "action_mailer/railtie"

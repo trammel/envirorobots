@@ -17,9 +17,9 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.required_ruby_version = '>= 3.0.1'
 
-  s.add_dependency 'rack', '>= 2.0.6'
-  s.add_dependency 'rails', '>= 5'
+  s.add_dependency 'rails'
   s.add_development_dependency 'ammeter'
   s.add_development_dependency 'brakeman'
   s.add_development_dependency 'codecov'
